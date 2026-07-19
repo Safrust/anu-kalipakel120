@@ -90,7 +90,43 @@ export default function TimPage() {
         align="center"
       />
 
-      <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
+      <div className="grid gap-4 md:hidden">
+        {teamMembers.map((member) => (
+          <article
+            key={member.nim}
+            className="rounded-3xl border border-border bg-white/85 p-5 shadow-sm"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-strong">
+              {member.nim}
+            </p>
+            <h3 className="mt-2 text-lg font-semibold tracking-tight text-foreground">
+              {member.name}
+            </h3>
+            <dl className="mt-4 grid gap-3 text-sm leading-6 text-muted">
+              <div>
+                <dt className="font-semibold uppercase tracking-[0.18em] text-[color:var(--accent-strong)]">
+                  Fakultas
+                </dt>
+                <dd className="mt-1 text-foreground">{member.faculty}</dd>
+              </div>
+              <div>
+                <dt className="font-semibold uppercase tracking-[0.18em] text-[color:var(--accent-strong)]">
+                  Prodi
+                </dt>
+                <dd className="mt-1 text-foreground">{member.prodi}</dd>
+              </div>
+              <div>
+                <dt className="font-semibold uppercase tracking-[0.18em] text-[color:var(--accent-strong)]">
+                  No. Handphone
+                </dt>
+                <dd className="mt-1 text-foreground">{member.phone}</dd>
+              </div>
+            </dl>
+          </article>
+        ))}
+      </div>
+
+      <div className="hidden overflow-hidden rounded-3xl border border-border bg-white shadow-sm md:block">
         <div className="overflow-x-auto">
           <table className="w-full min-w-230 border-collapse text-sm">
             <thead>

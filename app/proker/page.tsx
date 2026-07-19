@@ -11,18 +11,18 @@ export default function ProkerPage() {
         description="Program unggulan dan pendukung ditampilkan bersama status, penanggung jawab, ringkasan, dan arah keberlanjutan agar mudah dipantau."
       />
 
-      <div className="grid gap-6">
+      <div className="grid gap-4">
         {prokerItems.map((item) => (
           <article
             key={item.slug}
-            className="rounded-3xl border border-[color:var(--border)] bg-white/80 p-6 shadow-sm"
+            className="rounded-3xl border border-[color:var(--border)] bg-white/80 p-5 shadow-sm sm:p-6"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
                   {item.status}
                 </p>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-2 text-lg font-semibold tracking-tight sm:text-2xl">
                   {item.title}
                 </h3>
               </div>
@@ -31,7 +31,7 @@ export default function ProkerPage() {
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[color:var(--muted)]">
               {item.summary}
             </p>
-            <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            <div className="mt-6 grid gap-3 lg:grid-cols-3">
               <div className="rounded-2xl bg-[color:var(--surface)] p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent-strong)]">
                   Target

@@ -29,25 +29,25 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-16 pb-8 pt-4 lg:space-y-24 lg:pt-8">
-      <section className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
-        <div className="space-y-8">
+    <div className="space-y-14 pb-8 pt-4 lg:space-y-24 lg:pt-8">
+      <section className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
+        <div className="space-y-7 sm:space-y-8">
           <span className="inline-flex w-fit items-center rounded-full border border-border bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent-strong shadow-sm backdrop-blur">
             Website Dokumentasi KKN
           </span>
           <div className="space-y-5">
-            <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
               Tim KKN Kalipakel 120 menyusun arsip dokumentasi yang hangat,
               informatif, dan mudah dibaca kembali.
             </h1>
-            <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
+            <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base sm:leading-8 lg:text-lg">
               Website ini dirancang sebagai kenang-kenangan sekaligus pusat
               dokumentasi KKN: profil desa, program kerja, kronologi kegiatan,
               galeri, tim, laporan, dan jalur koordinasi disusun agar mudah
               dipahami oleh kampus, warga, dan anggota kelompok sendiri.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/proker"
               className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-900/20 transition hover:bg-accent-strong"
@@ -61,11 +61,11 @@ export default function Home() {
               Buka Dokumentasi
             </Link>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
             {heroStats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-3xl border border-border bg-surface p-5 shadow-sm"
+                className="rounded-3xl border border-border bg-surface p-4 shadow-sm sm:p-5"
               >
                 <div className="text-3xl font-semibold tracking-tight text-accent-strong">
                   {stat.value}
@@ -77,7 +77,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <aside className="rounded-4xl border border-border bg-surface p-6 shadow-[0_24px_80px_rgba(17,33,31,0.08)]">
+        <aside className="rounded-4xl border border-border bg-surface p-5 shadow-[0_24px_80px_rgba(17,33,31,0.08)] sm:p-6">
           <div className="space-y-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-strong">
@@ -113,11 +113,11 @@ export default function Home() {
           title="Bukan sekadar galeri, tetapi arsip yang bercerita"
           description="Tiga fokus di bawah ini membantu pengunjung memahami fungsi website sejak awal: sebagai dokumentasi, sebagai arsip, dan sebagai kenang-kenangan KKN."
         />
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-3">
           {archivePillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="rounded-3xl border border-border bg-white/75 p-6 shadow-sm"
+              className="rounded-3xl border border-border bg-white/75 p-5 shadow-sm sm:p-6"
             >
               <h3 className="text-xl font-semibold tracking-tight">
                 {pillar.title}
@@ -136,11 +136,11 @@ export default function Home() {
           title="Prioritas yang selaras dengan kebutuhan lapangan"
           description="Setiap proker disusun dengan status, penanggung jawab, target, dan hasil yang diharapkan agar mudah dipantau selama masa KKN."
         />
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-3">
           {featuredProker.map((item) => (
             <article
               key={item.slug}
-              className="rounded-3xl border border-border bg-white/75 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-3xl border border-border bg-white/75 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-6"
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="rounded-full bg-surface-strong px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-strong">
@@ -171,11 +171,11 @@ export default function Home() {
           title="Kronologi kegiatan yang bisa dibaca sebagai cerita lapangan"
           description="Entri dibuat berurutan agar perkembangan aktivitas mudah dilihat oleh DPL, kampus, warga desa, dan anggota tim sendiri."
         />
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-3">
           {latestActivities.map((activity) => (
             <article
               key={activity.slug}
-              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+              className="rounded-3xl border border-border bg-surface p-5 shadow-sm sm:p-6"
             >
               <p className="text-sm font-medium text-accent-strong">
                 {activity.date}

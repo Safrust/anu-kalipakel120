@@ -11,14 +11,14 @@ export default function KontakPage() {
         description="Halaman ini tidak menampilkan nomor palsu; isinya diarahkan ke halaman yang memang dipakai untuk koordinasi, dokumentasi, dan penyimpanan arsip."
       />
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         {contacts.map((contact) => {
           const content = (
-            <article className="rounded-3xl border border-border bg-white/80 p-6 shadow-sm">
+            <article className="rounded-3xl border border-border bg-white/80 p-5 shadow-sm sm:p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-strong">
                 {contact.label}
               </p>
-              <p className="mt-3 text-xl font-semibold tracking-tight">
+              <p className="mt-3 text-lg font-semibold tracking-tight sm:text-xl">
                 {contact.value}
               </p>
               {contact.href ? (

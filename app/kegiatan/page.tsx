@@ -11,18 +11,18 @@ export default function KegiatanPage() {
         description="Urutan tanggal membantu pembaca memahami progres tim dari survei, pelaksanaan proker, hingga evaluasi rutin."
       />
 
-      <div className="space-y-5">
+      <div className="space-y-4">
         {activities.map((activity) => (
           <article
             key={activity.slug}
-            className="rounded-3xl border border-[color:var(--border)] bg-white/80 p-6 shadow-sm"
+            className="rounded-3xl border border-[color:var(--border)] bg-white/80 p-5 shadow-sm sm:p-6"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <p className="text-sm font-semibold text-[color:var(--accent-strong)]">
                   {activity.date}
                 </p>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-2 text-lg font-semibold tracking-tight sm:text-2xl">
                   {activity.title}
                 </h3>
               </div>

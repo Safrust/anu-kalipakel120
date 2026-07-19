@@ -11,11 +11,11 @@ export default function LaporanPage() {
         description="Halaman ini merangkum dokumen yang akan diunggah, sehingga arsip tetap satu pintu tanpa menampilkan tautan kosong."
       />
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-4 lg:grid-cols-3">
         {reports.map((report) => (
           <article
             key={report.title}
-            className="rounded-3xl border border-border bg-white/80 p-6 shadow-sm"
+            className="rounded-3xl border border-border bg-white/80 p-5 shadow-sm sm:p-6"
           >
             <div className="flex flex-wrap gap-2">
               <span className="rounded-full bg-surface-strong px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-strong">
@@ -27,7 +27,7 @@ export default function LaporanPage() {
                 </span>
               ) : null}
             </div>
-            <h3 className="mt-4 text-xl font-semibold tracking-tight">
+            <h3 className="mt-4 text-lg font-semibold tracking-tight sm:text-xl">
               {report.title}
             </h3>
             <p className="mt-3 text-sm leading-7 text-muted">
